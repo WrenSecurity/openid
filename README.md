@@ -13,8 +13,9 @@ If you are fine configuring OpenAM to match the default configuration of the sam
 can use it as-is from the packaged version. Here's how:
 
 1.   Download the packaged version.
-2.   Unpack the package in a new folder called `openid` inside the webroot for the Tomcat
-     instance that's running OpenAM (e.g. create the folder `/var/lib/tomcat8/webapps/openid`).
+2.   Unpack the package in a new folder called `openid-sample` inside the webroot for the Tomcat
+     instance that's running OpenAM (e.g. create the folder 
+     `/var/lib/tomcat8/webapps/openid-sample`).
 3.   Restart Tomcat.
 4.   Create the agent profile as described in the examples.
 5.   Try it out.
@@ -26,7 +27,7 @@ source. Here's how:
 1.   Clone the project for deployment in your container alongside OpenAM.
      For example, with OpenAM in `/path/to/tomcat/webapps/openam`,
      clone this under `/path/to/tomcat/webapps`
-     into `/path/to/tomcat/webapps/openid`.
+     into `/path/to/tomcat/webapps/openid-sample`.
 2.   Install [Yarn](https://yarnpkg.com/lang/en/docs/install/).
 3.   Install dependencies (i.e. run `yarn install` from within the folder that contains this 
      `README.md` file).
@@ -48,3 +49,4 @@ License, v. 2.0. If a copy of the MPL was not distributed with this
 file, You can obtain one at http://mozilla.org/MPL/2.0/.
 
 Copyright 2013-2015 ForgeRock AS.
+Portions Copyright 2017 Rosie Applications, Inc.

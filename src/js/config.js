@@ -19,7 +19,7 @@ define(['./common'], function (common) {
   var config = {
     sample_app: {
       // This application is assumed to be deployed under /openid.
-      app_root: "/openid",
+      app_root: "/openid-sample",
 
       client_agent: {
         client_id:     "myClientID",
