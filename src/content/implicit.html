@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+        "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<!--
+! MPL 2.0 HEADER START
+!
+! This Source Code Form is subject to the terms of the Mozilla Public
+! License, v. 2.0. If a copy of the MPL was not distributed with this
+! file, You can obtain one at http://mozilla.org/MPL/2.0/.
+!
+! If applicable, add the following below this MPL 2.0 HEADER, replacing
+! the fields enclosed by brackets "[]" replaced with your own identifying
+! information:
+!     Portions Copyright [yyyy] [name of copyright owner]
+!
+! MPL 2.0 HEADER END
+!
+!     Copyright 2013-2014 ForgeRock AS
+!     Portions Copyright 2017 Rosie Applications, Inc.
+!
+-->
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>OpenID Connect Implicit Client Profile</title>
+    <link rel="shortcut icon" href="http://forgerock.com/favicon.ico">
+    <link type="text/css" rel="stylesheet" href="css/style.css">
+    <script type="text/javascript" src="js/implicit.bundle.js"></script>
+    <script type="text/javascript">
+        window.onload = function() {
+            Page.renderIntro();
+        };
+    </script>
+</head>
+<body>
+
+<div>
+    <a href="http://openam.forgerock.org/">
+        <img src="forgerock-logo.svg" width="131" height="83" align="right" alt="ForgeRock Logo">
+    </a>
+</div>
+
+<h3>Implicit Client Profile Start Page</h3>
+
+<p>This example tries OpenAM as an OpenID Connect provider using the
+   <a href="http://openid.net/specs/openid-connect-implicit-1_0.html"
+   target="_blank">Implicit Client Profile</a>.</p>
+
+<p>OpenID Connect Implicit Client Profile 1.0 is designed for relying parties
+   that use the OAuth 2.0 Implicit grant type. This grant type is designed for
+   clients implemented in a browser. Rather than protect a client secret, the
+   client profile must register a protected redirect URI in advance with the
+   OpenID Provider.</p>
+
+<div id="config"></div>
+
+<p><a id="link" href="#">Start authorization</a></p>
+
+</body>
+</html>

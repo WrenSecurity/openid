@@ -1,0 +1,19 @@
+{
+  "name": "wrensec-openid-samples",
+  "version": "13.0.0-SNAPSHOT",
+  "repository": "git://github.com/WrenSecurity/wrensec-sample-openid",
+  "license": "MPL-2.0",
+  "description": "OpenID Connect 1.0 samples for OpenAM / Wren:AM.",
+  "author": "Wren Security <https://wrensecurity.org>",
+  "dependencies": {
+    "crypto-js": "^3.1.9-1",
+    "jquery": "^3.2.1"
+  },
+  "devDependencies": {
+    "copy-webpack-plugin": "^4.2.3",
+    "webpack": "^3.10.0"
+  },
+  "scripts": {
+    "compile": "webpack --config webpack.config.js"
+  }
+}
