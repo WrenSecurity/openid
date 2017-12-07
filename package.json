@@ -1,5 +1,5 @@
 {
-  "name": "wrensec-openid-samples",
+  "name": "wrensec-sample-openid",
   "version": "13.0.0-SNAPSHOT",
   "repository": "git://github.com/WrenSecurity/wrensec-sample-openid",
   "license": "MPL-2.0",
