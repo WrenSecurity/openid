@@ -128,7 +128,7 @@ define(['./common', './config', 'jquery'], function (common, config, $) {
           "realm":        client_realm,
           "redirect_uri": config.basic_profile.getRedirectUri()
         },
-        accepts: "json"
+        dataType: "json"
       }).done(function (data) {
         $("#token").html(
             "<h3>Token Response</h3>" +
@@ -214,7 +214,8 @@ define(['./common', './config', 'jquery'], function (common, config, $) {
           url: server + openam + info,
           beforeSend: function (xhr) {
             xhr.setRequestHeader("Authorization", "Bearer " + access_token);
-          }
+          },
+          dataType: "json"
         }).done(function (data) {
           $("#info").html(
               "<h3>End User Info</h3>" +

@@ -183,7 +183,7 @@ define(['./config', './common', 'jquery'], function (config, common, $) {
         // max_age not requested
 
         $.ajax({
-          url:        config.getSsoPath(config.sso_app.endpoints.info),
+          url: config.getSsoPath(config.sso_app.endpoints.info),
           beforeSend: function (xhr) {
             xhr.setRequestHeader(
               "Authorization", "Bearer " + params["access_token"]);
@@ -191,7 +191,8 @@ define(['./config', './common', 'jquery'], function (config, common, $) {
           data: {
             "scope": "openid profile",
             "realm": client_realm
-          }
+          },
+          dataType: "json"
         }).done(function (data) {
           $("#info").html(
               "<h3>Profile Information</h3>" +
