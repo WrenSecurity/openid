@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+        "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<!--
+! MPL 2.0 HEADER START
+!
+! This Source Code Form is subject to the terms of the Mozilla Public
+! License, v. 2.0. If a copy of the MPL was not distributed with this
+! file, You can obtain one at http://mozilla.org/MPL/2.0/.
+!
+! If applicable, add the following below this MPL 2.0 HEADER, replacing
+! the fields enclosed by brackets "[]" replaced with your own identifying
+! information:
+!     Portions Copyright [yyyy] [name of copyright owner]
+!
+! MPL 2.0 HEADER END
+!
+!     Copyright 2013-2015 ForgeRock AS.
+!     Portions Copyright 2017 Rosie Applications, Inc.
+!
+-->
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>OpenID Connect Client Registration</title>
+    <link rel="shortcut icon" href="http://forgerock.com/favicon.ico">
+    <link type="text/css" rel="stylesheet" href="css/style.css">
+    <script type="text/javascript" src="js/register.bundle.js"></script>
+    <script type="text/javascript">
+        window.onload = function() {
+            Page.renderIntro();
+        };
+    </script>
+</head>
+<body>
+
+<div>
+    <a href="http://openam.forgerock.org/">
+        <img src="forgerock-logo.svg" width="131" height="83" align="right" alt="ForgeRock Logo">
+    </a>
+</div>
+
+<h3>Client Registration Page</h3>
+
+<p>This page serves to register this example client with OpenAM dynamically
+   as defined by <a
+   href="http://openid.net/specs/openid-connect-registration-1_0.html"
+   target="_blank">OpenID Connect Dynamic Client Registration 1.0</a>.
+   If you want only to view the provider configuration, you can click
+   Submit without providing an access token.</p>
+
+<div id="form"></div>
+
+<p style="clear: both;">For dynamic registration you might need an access token to
+    write the configuration to OpenAM by HTTP POST. To obtain the access token,
+    register an initial client statically after creating OpenID Connect
+    provider, and then obtain the access token.</p>
+
+<blockquote>
+<h4>Tip</h4>
+<p>
+  In recent versions of OpenAM,
+  the console page for the OAuth2 Provider service configuration lets you enable
+  <strong>Allow Open Dynamic Client Registration</strong>,
+  so that no access token is required to register dynamically.
+</p>
+
+<p>
+  If you have enabled <strong>Allow Open Dynamic Client Registration</strong>,
+  then there is no need to get an access token.
+  Just click the Submit button.
+</p>
+</blockquote>
+
+<p>For example, if you register an OAuth 2.0 client in the top-level realm
+    with name <code>myClientID</code> and client secret <code>password</code>,
+    and <code>amadmin</code> has password <code>password</code>, you can obtain
+    the access token as follows.</p>
+
+<div id="command"></div>
+
+<p>The JSON response should contain an access token that you can use to register
+   your client.</p>
+
+<pre>{"expires_in":59,"token_type":"Bearer","refresh_token":"21fd795b-893b-4a4d-8d09-1d797620a969","access_token":"<b>45f3c1ae-fc01-4bfa-bd86-577c2c21212d</b>"}</pre>
+
+<p>Do not use the example token, but instead get your own access token from
+   OpenAM.</p>
+
+<hr />
+
+<div id="config"></div>
+<div id="info"></div>
+
+<hr>
+<p align="center"><a href="index.html">Start over</a></p>
+
+</body>
+</html>

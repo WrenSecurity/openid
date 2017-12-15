@@ -59,6 +59,7 @@ pre {
     border: 1px dashed #ccc;
     padding: 5px;
     word-wrap: break-word;
+    white-space: pre-wrap;
 }
 
 hr {
