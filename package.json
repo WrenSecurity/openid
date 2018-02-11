@@ -10,10 +10,15 @@
     "jquery": "^3.2.1"
   },
   "devDependencies": {
-    "copy-webpack-plugin": "^4.2.3",
-    "webpack": "^3.10.0"
+    "browser-sync": "^2.18.13",
+    "gulp": "^3.9.1",
+    "gulp-plumber": "^1.1.0",
+    "gulp-util": "^3.0.8",
+    "package": "^1.0.1",
+    "webpack": "^3.10.0",
+    "webpack-stream": "^4.0.0"
   },
   "scripts": {
-    "compile": "./node_modules/.bin/webpack --config webpack.config.js"
+    "package": "./node_modules/.bin/gulp package"
   }
 }
